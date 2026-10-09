@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#5ebfff">
+  <title>Typing Race</title>
+  <!--
+    Typing Race - a responsive rebuild of "Eat My Dust!"
+    Original game by Junsik Shim and Juhyun Choi (art by wabie), js13kGames 2019. MIT License, see LICENSE.
+  -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="scene-title">
+  <div id="app">
+    <!-- The race track: sky, runners, ground (drawn on the canvas) -->
+    <div id="scene">
+      <canvas id="canvas" aria-label="Race track"></canvas>
+
+      <div id="hud">
+        <button id="menu-btn" class="hud-btn" type="button" aria-label="Back to title screen">
+          <span class="key-hint">Esc</span> Menu
+        </button>
+        <div id="distance"><span class="lbl">Distance</span> <span id="distance-value">0.00m</span></div>
+        <div id="energy"><span class="lbl">Energy</span> <div id="energy-frame"><div id="energy-bar"></div></div></div>
+      </div>
+
+      <div id="start-msg" class="blink">Type to start!</div>
+    </div>
+
+    <!-- Everything below the track: title text, typing box, results -->
+    <div id="panel">
+      <div id="title-panel">
+        <button id="start-btn" class="blink" type="button">
+          <span class="only-keys">Press Space to start!</span>
+          <span class="only-touch">Tap to start!</span>
+        </button>
+        <div id="credits">
+          <div><b>Developed by</b> Junsik Shim &amp; Juhyun Choi</div>
+          <div><b>Artwork by</b> wabie</div>
+        </div>
+      </div>
+
+      <div id="textbox" aria-live="off">
+        <div id="line"></div>
+        <div id="next-line"></div>
+        <input id="kbd" type="text" autocomplete="off" autocorrect="off" autocapitalize="off"
+               spellcheck="false" enterkeyhint="done" aria-label="Type the text here">
+        <div id="tap-to-type">Tap here to type</div>
+      </div>
+
+      <div id="result">
+        <div id="result-title">New Record!</div>
+        <div id="result-distance">0.00m</div>
+        <div id="result-detail"></div>
+        <div class="buttons">
+          <button id="again-btn" type="button">Race again <span class="key-hint">Enter</span></button>
+          <button id="stories-btn" type="button">Stories <span class="key-hint">Esc</span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Story picker -->
+    <div id="picker" role="dialog" aria-label="Select a story">
+      <div class="picker-box">
+        <div class="picker-head">
+          <div class="picker-title">Select a story</div>
+          <button id="picker-back" type="button">Back</button>
+        </div>
+        <ul id="story-list"></ul>
+        <div class="picker-hint">
+          <span class="only-keys">Up/Down arrows to choose, Enter to start</span>
+          <span class="only-touch">Tap a story to start</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

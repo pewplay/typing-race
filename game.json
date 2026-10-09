@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
+  "title": "Typing Race",
+  "description": "Type classic fables to sprint your pixel runner past a bot and the ghosts of your best runs in this free typing game in your browser.",
+  "about": "Typing Race turns typing practice into a footrace. A story scrolls by two lines at a time, and every correct letter pushes your little karate runner forward. A typo empties your energy bar, but 50 correct letters in a row unleash a sprint where your runner blazes ahead and every letter you type adds an extra meter.\n\nThe first time you type a story you race a bot. After that you race yourself: your best three runs come back as translucent ghosts that replay every keystroke exactly as you typed it, so you can see where you gained or lost ground. Pick from three Aesop fables and chase a new record on each one.\n\nOriginally created by Junsik Shim and Juhyun Choi, with art by wabie, for js13kGames 2019 as Eat My Dust!.",
+  "howToPlay": "Pick a story and type the highlighted letter; the race starts with your first correct letter. Correct letters speed your runner up and fill the energy bar, while a typo empties it. Fill the bar to trigger a sprint, finish the text, and whoever ran farthest wins.",
+  "controls": [
+    { "input": "Keyboard", "action": "Type the highlighted text" },
+    { "input": "Phone keyboard", "action": "Tap the text box to open it and type" },
+    { "input": "Space / Tap", "action": "Start and open the story list" },
+    { "input": "Arrow keys + Enter / Tap", "action": "Choose a story" },
+    { "input": "Esc / Menu button", "action": "Back to the title screen" }
+  ],
+  "tips": [
+    "Accuracy beats raw speed: one typo empties the energy bar you built letter by letter.",
+    "Keep typing during a sprint, because every correct letter then is worth an extra meter.",
+    "Watch the ghost labels above the track to see which of your past runs you are beating.",
+    "Mind the punctuation and capital letters, since commas and quotes count just like any other key."
+  ],
+  "faq": [
+    { "question": "Is Typing Race free to play?", "answer": "Yes, it is completely free and runs in your browser with no download or sign-up." },
+    { "question": "Can I play on a phone or tablet?", "answer": "Yes, tap the text box to bring up your on-screen keyboard and the track shrinks to stay visible above it. It is playable, but you will be much faster on a physical keyboard, and some phone keyboards' autocorrect can occasionally get in the way." },
+    { "question": "What are the ghosts?", "answer": "They are replays of your three best runs on that story, saved in your browser, which race alongside you keystroke by keystroke." }
+  ],
+  "category": "Educational",
+  "tags": ["typing", "keyboard", "race", "pixel art", "practice"],
+  "author": "Junsik Shim",
+  "playMode": "SinglePlayer",
+  "orientation": "any",
+  "cover": "cover.png",
+  "screenshots": ["screenshots/1.png", "screenshots/2.png", "screenshots/3.png"],
+  "added": "2026-10-09",
+  "draft": false
+}
